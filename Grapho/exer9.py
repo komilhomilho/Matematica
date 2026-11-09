@@ -1,11 +1,11 @@
 from gerador_grafo import criar_grafo, nx
 
-grafo, posicoes = criar_grafo(tipo_grafo='arvore_binaria', tipo_valor='numero', quantidade_nos=150, gerar_posicoes=True)
+grafo, posicoes = criar_grafo(tipo_grafo='arvore_binaria_busca', tipo_valor='numero', quantidade_nos=150, gerar_posicoes=True)
 
 nodes_with_pos = [(node, coords[0], coords[1]) for node, coords in posicoes.items()]
 print("Nós com posições extraídos com sucesso!")
 
-# 3. Função corrigida para excluir do GRAFO os nós com ID par
+# 9. Escreva uma função que exclui todos os nós de uma árvore binária de busca com ID par.
 def excluir_pares(arvore):
     nos_para_remover = [no for no in arvore.nodes if no % 2 == 0]
     
